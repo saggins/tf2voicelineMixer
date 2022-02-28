@@ -14,3 +14,7 @@ class Word(BaseModel):
     soundFilePath: str
     startMS: str
     endMS: str
+
+class UserInput(BaseModel):
+    class_: str
+    userInput: str

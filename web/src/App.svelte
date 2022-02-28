@@ -1,11 +1,15 @@
 <script>
 	export let name;
+	//TODO needs to ask backend for phomem, word model 
+	//TODO needs to be able to manulaple audio (howlerjs?????) 
 </script>
 
 <main>
-<span>Type waht you want -></span>
-
-	<input type="text" name="" id="usertext">
+	<span>Type waht you want -></span>
+	<select name="classToPick" id="class">
+		<option value="1">Scout</option>
+	</select>
+	<input type="text" name="userInput" id="userInput">
 	<button type="submit">submit</button>
 </main>
 
