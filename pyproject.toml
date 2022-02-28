@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "tf2audiogen"
+version = "0.1.0"
+description = "generates tf2 voice lines, by phomemes"
+authors = ["Saggins <win32prog@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+bs4 = "^0.0.1"
+requests = "^2.27.1"
+pydub = "^0.25.1"
+pydantic = "^1.9.0"
+fastapi = "^0.74.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

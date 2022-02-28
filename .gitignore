@@ -1,0 +1,4 @@
+sounds/
+.vscode/
+*.wav
+*.json
