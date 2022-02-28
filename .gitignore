@@ -2,3 +2,4 @@ sounds/*
 .vscode/
 *.wav
 *.json
+__pycache__
