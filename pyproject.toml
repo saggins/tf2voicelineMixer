@@ -12,6 +12,7 @@ pydub = "^0.25.1"
 pydantic = "^1.9.0"
 fastapi = "^0.74.1"
 uvicorn = "^0.17.5"
+transcriber-wrapper = "^1.2.1"
 
 [tool.poetry.dev-dependencies]
 
