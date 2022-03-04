@@ -4,9 +4,10 @@ from pydantic import BaseModel
 class Phoneme (BaseModel):
     class_ : str
     phoneme: str
+    word: str
     soundFilePath: str
-    startMS: str
-    endMS: str
+    startMS: float
+    endMS: float
 
 class Word(BaseModel): 
     class_ : str

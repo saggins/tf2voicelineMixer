@@ -7,13 +7,15 @@ phonemeTable = """
 CREATE TABLE IF NOT EXISTS phoneme (
     class char(10) NOT NULL,
     phoneme char(4) NOT NULL,
-    
-
+    word char (100) NOT NULL,
+    soundFilePath char(100) NOT NULL,
+    startMS int(10) NOT NULL,
+    endMS int (10) NOT NULL    
 );
 """
 
 wordTable = """
-CREATE TABLE IF NOT EXISTS phoneme (
+CREATE TABLE IF NOT EXISTS words (
     class char(10) NOT NULL,
     word char(100) NOT NULL,
     soundFilePath char(100) NOT NULL,
@@ -31,7 +33,15 @@ def startup():
 startup()
 
 def addPhoneme(phoneme: Phoneme):
-    pass
+    sql_addPhoneme = """
+        INSERT INTO phoneme (class, phoneme, word, soundFilePath, startMS, endMS)
+        VALUES (?, ?, ?, ?, ?, ?);
+    """
+    getConn().execute(sql_addPhoneme, (phoneme.class_, phoneme.phoneme, phoneme.word, phoneme.soundFilePath, phoneme.startMS, phoneme.endMS))
 
 def addWord (word : Word):
-    pass
+    sql_addWord = """
+        INSERT INTO word (class, word, soundFilePath, startMS, endMS)
+        VALUES (?, ?, ?, ?, ?);
+    """
+    getConn().execute(sql_addWord, (word.class_, word.phoneme, word.word, word.soundFilePath, word.startMS, word.endMS))
